@@ -15,42 +15,62 @@
 
   <main class="contenedor-productos">
     <div class="producto">
-      <video autoplay loop playsinline width="100%">
+      <video autoplay muted loop playsinline width="100%">
         <source src="videos/bananasplit.mp4" type="video/mp4">
         Tu navegador no soporta la etiqueta de video.
       </video>
       <h3>Banana Split</h3>
       <p>Conoce nuestros sabores</p>
+      <button id="muteButton" onclick="toggleMute()">Sonido</button>
     </div>
 
     <div class="producto">
-      <video autoplay loop playsinline width="100%">
+      <video autoplay muted loop playsinline width="100%">
         <source src="videos/acaai.mp4" type="video/mp4">
         Tu navegador no soporta la etiqueta de video.
       </video>
       <h3>Açai</h3>
       <p>Me olvidé de grabar mi aca'ai</p>
+      <button id="muteButton" onclick="toggleMute()">Sonido</button>
     </div>
 
     <div class="producto">
-      <video autoplay loop playsinline width="100%">
+      <video autoplay muted loop playsinline width="100%">
         <source src="videos/acaitropical.mp4" type="video/mp4">
         Tu navegador no soporta la etiqueta de video.
       </video>
       <h3>Açai Tropical (Fitness)</h3>
       <p>Ya probaste nuestro açai tropical?</p>
+      <button id="muteButton" onclick="toggleMute()">Sonido</button>
     </div>
 
     <div class="producto">
-      <video autoplay loop playsinline width="100%">
+      <video autoplay muted loop playsinline width="100%">
         <source src="videos/montandoacai.mp4" type="video/mp4">
         Tu navegador no soporta la etiqueta de video.
       </video>
       <h3>Montando nuestro açai</h3>
       <p>Nuestros clientes merecen siempre lo mejor</p>
+      <button id="muteButton" onclick="toggleMute()">Sonido</button>
     </div>
   </main>
-
+  
+<script>
+  // Función para alternar el mute
+  function toggleMute() {
+    var video = document.getElementById('video');
+    var muteButton = document.getElementById('muteButton');
+    
+    if (video.muted) {
+      video.muted = false;
+      muteButton.textContent = 'Mutear'; // Cambiar el texto del botón
+    } else {
+      video.muted = true;
+      muteButton.textContent = 'Desmutear'; // Cambiar el texto del botón
+    }
+  }
+</script>
+  
     <footer>
       <p>© 2025 Top Açai - Todos los derechos reservados</p>
       <div class="redes-sociales">
