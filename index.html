@@ -15,59 +15,78 @@
 
   <main class="contenedor-productos">
     <div class="producto">
-      <video autoplay muted loop playsinline width="100%">
+      <video id="video1" autoplay muted loop playsinline width="100%">
         <source src="videos/bananasplit.mp4" type="video/mp4">
         Tu navegador no soporta la etiqueta de video.
       </video>
       <h3>Banana Split</h3>
       <p>Conoce nuestros sabores</p>
+      <button id="muteButton1" onclick="toggleMute('video1', 'muteButton1')">Activar sonido</button>
     </div>
 
     <div class="producto">
-      <video autoplay muted loop playsinline width="100%">
+      <video id="video2" autoplay muted loop playsinline width="100%">
         <source src="videos/acaai.mp4" type="video/mp4">
         Tu navegador no soporta la etiqueta de video.
       </video>
       <h3>Açai</h3>
       <p>Me olvidé de grabar mi aca'ai</p>
+      <button id="muteButton2" onclick="toggleMute('video2', 'muteButton2')">Activar sonido</button>
     </div>
 
     <div class="producto">
-      <video autoplay muted loop playsinline width="100%">
+      <video id="video3" autoplay muted loop playsinline width="100%">
         <source src="videos/acaitropical.mp4" type="video/mp4">
         Tu navegador no soporta la etiqueta de video.
       </video>
       <h3>Açai Tropical (Fitness)</h3>
       <p>Ya probaste nuestro açai tropical?</p>
+      <button id="muteButton3" onclick="toggleMute('video3', 'muteButton3')">Activar sonido</button>
     </div>
 
     <div class="producto">
-      <video autoplay muted loop playsinline width="100%">
+      <video id="video4" autoplay muted loop playsinline width="100%">
         <source src="videos/montandoacai.mp4" type="video/mp4">
         Tu navegador no soporta la etiqueta de video.
       </video>
       <h3>Montando nuestro açai</h3>
       <p>Nuestros clientes merecen siempre lo mejor</p>
+      <button id="muteButton4" onclick="toggleMute('video4', 'muteButton4')">Activar sonido</button>
     </div>
   </main>
   
-    <footer>
-      <p>© 2025 Top Açai - Todos los derechos reservados</p>
-      <div class="redes-sociales">
-        <a href="https://www.instagram.com/top_acai_pjc_2024" target="_blank" title="Instagram">
-          <img src="imagenes/iconos/instagram.png" alt="Instagram">
-        </a>
-        <a href="https://www.facebook.com/top açai pjc" target="_blank" title="Facebook">
-          <img src="imagenes/iconos/facebook.png" alt="Facebook">
-        </a>
-        <a href="https://wa.me/595986315364?text=Hola!%20quiero%20hacer%20un%20pedido%20de..." target="_blank" title="WhatsApp">
-          <img src="imagenes/iconos/whatsapp.png" alt="WhatsApp">
-        </a>
-        <a href="https://www.tiktok.com/@top_acai00" target="_blank" title="TikTok">
-          <img src="imagenes/iconos/tiktok.png" alt="TikTok">
-        </a>
-      </div>
-    </footer>
-    
+  <footer>
+    <p>© 2025 Top Açai - Todos los derechos reservados</p>
+    <div class="redes-sociales">
+      <a href="https://www.instagram.com/top_acai_pjc_2024" target="_blank" title="Instagram">
+        <img src="imagenes/iconos/instagram.png" alt="Instagram">
+      </a>
+      <a href="https://www.facebook.com/top açai pjc" target="_blank" title="Facebook">
+        <img src="imagenes/iconos/facebook.png" alt="Facebook">
+      </a>
+      <a href="https://wa.me/595986315364?text=Hola!%20quiero%20hacer%20un%20pedido%20de..." target="_blank" title="WhatsApp">
+        <img src="imagenes/iconos/whatsapp.png" alt="WhatsApp">
+      </a>
+      <a href="https://www.tiktok.com/@top_acai00" target="_blank" title="TikTok">
+        <img src="imagenes/iconos/tiktok.png" alt="TikTok">
+      </a>
+    </div>
+  </footer>
+
+  <script>
+    function toggleMute(videoId, buttonId) {
+      var video = document.getElementById(videoId);
+      var muteButton = document.getElementById(buttonId);
+      
+      // Alternar el sonido
+      if (video.muted) {
+        video.muted = false;
+        muteButton.textContent = 'Desactivar sonido'; // Cambiar el texto del botón
+      } else {
+        video.muted = true;
+        muteButton.textContent = 'Activar sonido'; // Cambiar el texto del botón
+      }
+    }
+  </script>
 </body>
 </html>
